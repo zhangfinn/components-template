@@ -1,0 +1,13 @@
+src/sites
+scripts
+coverage
+node_modules
+dist
+.idea
+.husky
+.vscode
+
+src/packages/ui.react.build.ts
+src/packages/ui.react.ts
+src/packages/ui.react.scss.ts
+src/sites/doc/docs.ts
