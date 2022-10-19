@@ -84,6 +84,11 @@
   "engines": {
     "node": "^14.18.0 || >=15.0.0"
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }  
+  },
   "lint-staged": {
     "*.md": "prettier --write",
     "*.{ts,tsx,js,vue,scss}": "prettier --write"
