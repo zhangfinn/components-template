@@ -16,7 +16,7 @@
     "prepare": "husky install",
     "replace:scss": "node scripts/replace-scss-alias.js",
     "publish:beta": "npm publish --tag beta",
-    "commit": "git add . && npm run lint && git cz",
+    "commit": "git add . && git cz",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx --fix --quiet ./",
     "lint:demo": "eslint --fix ./src/packages/button",
     "test": "jest",
@@ -87,11 +87,6 @@
   },
   "engines": {
     "node": "^14.18.0 || >=15.0.0"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
   },
   "config": {
     "commitizen": {
