@@ -16,6 +16,7 @@
     "prepare": "husky install",
     "replace:scss": "node scripts/replace-scss-alias.js",
     "publish:beta": "npm publish --tag beta",
+    "commit": "git add . && npm run lint && git cz",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx --fix --quiet ./",
     "lint:demo": "eslint --fix ./src/packages/button",
     "test": "jest",
@@ -44,6 +45,9 @@
     "@typescript-eslint/parser": "^5.40.0",
     "@vitejs/plugin-react": "^2.1.0",
     "autoprefixer": "^10.4.0",
+    "commitizen": "^4.2.5",
+    "conventional-changelog-cli": "^2.2.2",
+    "cz-conventional-changelog-zh": "^0.0.2",
     "eslint": "^8.25.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.3.0",
@@ -87,7 +91,12 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }  
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog-zh"
+    }
   },
   "lint-staged": {
     "*.md": "prettier --write",
