@@ -3,16 +3,7 @@
     {
       "name": "基础组件",
       "enName": "base",
-      "packages": [
-        {
-          "version": "0.0.1",
-          "name": "tex-box",
-          "cName": "asd",
-          "desc": "",
-          "show": true,
-          "author": ""
-        }
-      ]
+      "packages": []
     }
   ]
 }

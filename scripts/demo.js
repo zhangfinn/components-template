@@ -45,7 +45,6 @@ test('should match snapshot', () => {
 })
 `,
     react: `import React, { FunctionComponent } from 'react'
-import './${name.toLowerCase()}.scss'
 
 export interface ${upperName}Props {
   name: string

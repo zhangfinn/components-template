@@ -58,7 +58,7 @@ export default defineConfig({
       entry: 'src/packages/ui.react.build.ts',
       name: 'ui.react',
       fileName: 'ui.react',
-      formats: ['es'],
+      formats: ['es', 'umd'],
     },
   },
 })

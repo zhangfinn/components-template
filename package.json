@@ -1,6 +1,32 @@
 {
   "name": "components-template",
   "version": "0.0.1",
+  "main": "dist/ui.react.umd.js",
+  "module": "dist/esm/ui-react.es.js",
+  "typings": "dist/types/index.d.ts",
+  "sideEffects": [
+    "*.scss",
+    "dist/esm/**/style/*",
+    "dist/style.css"
+  ],
+  "description": "",
+  "keywords": [
+    "react component",
+    "vite"
+  ],
+  "author": "jdcfe",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "package.json",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
   "scripts": {
     "add": "node scripts/createComponentMode.js",
     "dev": "npm run checked && vite --open --force",
