@@ -4,7 +4,15 @@ const map = require('map-stream')
 const config = require('../src/config.json')
 const dest_docs = './dist/types'
 const types = []
-
+const handler = (str) => {
+  let feng = ``
+  let arr = str.split(`-`)
+  let newArr = arr.map((ele, idx) => {
+    return ele[0].toUpperCase() + ele.slice(1)
+  })
+  feng = newArr.join(``)
+  return feng
+}
 exportComponentProps()
 
 function exportComponentProps() {
@@ -14,7 +22,9 @@ function exportComponentProps() {
       let { name, show, type, exportEmpty } = element
       if (show || exportEmpty) {
         types.push(
-          `export type { ${name}Props } from '@/packages/${name.toLowerCase()}/${name.toLowerCase()}${fileExt}';`
+          `export type { ${handler(
+            name
+          )}Props } from '@/packages/${name.toLowerCase()}/${name.toLowerCase()}${fileExt}';`
         )
       }
     })

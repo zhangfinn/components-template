@@ -30,7 +30,6 @@ config.nav.map((item) => {
       const matched = data.match(/@import.*?[;][\n\r]?/gi)
 
       let rewrite = ''
-      console.log(matched)
       if (matched && matched.length) {
         rewrite = matched.map((im) => {
           if (im.indexOf('../../styles/') > -1) {

@@ -6,11 +6,11 @@
       "packages": [
         {
           "version": "0.0.1",
-          "name": "button",
-          "cName": "按钮",
-          "desc": "点击按钮",
+          "name": "tex-box",
+          "cName": "asd",
+          "desc": "",
           "show": true,
-          "author": "aaa"
+          "author": ""
         }
       ]
     }

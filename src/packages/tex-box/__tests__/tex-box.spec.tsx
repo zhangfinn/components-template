@@ -2,9 +2,9 @@ import * as React from 'react'
 import { render } from '@testing-library/react'
 import '@testing-library/jest-dom'
 
-import { Button } from '../button'
+import { TexBox } from '../tex-box'
 
 test('should match snapshot', () => {
-  const { asFragment } = render(<Button />)
+  const { asFragment } = render(<TexBox />)
   expect(asFragment()).toMatchSnapshot()
 })

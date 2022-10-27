@@ -1,15 +1,15 @@
 import React from 'react'
-import { Button } from './button'
+import { TexBox } from './tex-box'
 
-const ButtonDemo = () => {
+const TexBoxDemo = () => {
   return (
     <>
       <div className="demo">
         <h2>基础用法</h2>
-        <Button />
+        <TexBox />
       </div>
     </>
   )
 }
 
-export default ButtonDemo
+export default TexBoxDemo
