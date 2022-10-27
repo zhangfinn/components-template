@@ -1,0 +1,44 @@
+#doc {
+  background: #fff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background: #fff;
+}
+.doc {
+  &-title {
+    width: 100%;
+    z-index: 2;
+    position: sticky;
+    border-bottom: 1px solid #eee;
+    top: 0px;
+    padding: 40px;
+    background: #fff;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.8s;
+
+    .title {
+      font-size: 40px;
+      font-weight: bold;
+    }
+  }
+  &-content {
+    margin-left: 290px;
+    display: flex;
+    flex-direction: column;
+
+    &-document {
+      min-height: 800px;
+      position: relative;
+      min-width: 1000px;
+      background: #fff;
+      padding: 40px 40px 40px 40px;
+    }
+  }
+}

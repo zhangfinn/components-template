@@ -1,0 +1,23 @@
+.doc {
+  &-header {
+    background: #000;
+    color: #ccc;
+    border-bottom: 1px solid #6b5554;
+    
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-width: 1300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 64px;
+    line-height: 64px;
+    text-align: left;
+    padding: 0 50px;
+    font-size: 20px;
+  }
+}
+
+

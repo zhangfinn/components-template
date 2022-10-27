@@ -59,9 +59,7 @@ export const ${upperName}: FunctionComponent<Partial<${upperName}Props>> = (prop
 ${upperName}.defaultProps = defaultProps
 ${upperName}.displayName = '${upperName}'
 `,
-    doc: `#  ${upperName}组件
-
-### 介绍
+    doc: `### 介绍
 
 基于 xxxxxxx
 

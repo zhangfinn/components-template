@@ -3,7 +3,16 @@
     {
       "name": "基础组件",
       "enName": "base",
-      "packages": []
+      "packages": [
+        {
+          "version": "0.0.1",
+          "name": "button",
+          "cName": "按钮",
+          "desc": "点击按钮",
+          "show": true,
+          "author": "aaa"
+        }
+      ]
     }
   ]
 }

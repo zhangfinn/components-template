@@ -11,15 +11,25 @@ const packages = []
 const onlineEditScss = []
 const mds = []
 const raws = []
+const handler = (str) => {
+  let feng = ``
+  let arr = str.split(`-`)
+  let newArr = arr.map((ele, idx) => {
+    return ele[0].toUpperCase() + ele.slice(1)
+  })
+  feng = newArr.join(``)
+  return feng
+}
 
 config.nav.map((item) => {
   item.packages.forEach((element) => {
     let { name, show, exportEmpty } = element
+    const upperName = handler(name)
     if (show || exportEmpty) {
-      importStr += `import ${name} from '@/packages/${name.toLowerCase()}';\n`
+      importStr += `import ${upperName} from '@/packages/${name.toLowerCase()}';\n`
       importScssStr += `import '@/packages/${name.toLowerCase()}/${name.toLowerCase()}.scss';\n`
 
-      packages.push(name)
+      packages.push(upperName)
     }
     if (show) {
       glob
@@ -43,12 +53,12 @@ config.nav.map((item) => {
             'demo.scss'
         )
         .map((f) => {
-          onlineEditScss.push(name)
-          importOnlineEditScssStr += `import ${name}Scss from '@/packages/${name.toLowerCase()}/demo.scss?raw';\n`
+          onlineEditScss.push(upperName)
+          importOnlineEditScssStr += `import ${upperName}Scss from '@/packages/${name.toLowerCase()}/demo.scss?raw';\n`
         })
-      importMarkdownStr += `import ${name} from '@/packages/${name.toLowerCase()}/doc.md?raw';\n`
-      mds.push(name)
-      raws.push(name)
+      importMarkdownStr += `import ${upperName} from '@/packages/${name.toLowerCase()}/doc.md?raw';\n`
+      mds.push(upperName)
+      raws.push(upperName)
     }
   })
 })

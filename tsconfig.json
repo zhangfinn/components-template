@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "rootDir": ".",
+    "baseUrl": "./",
+    "rootDir": "./",
     "target": "ESNext",
     "types": ["vite/client", "jest"],
     "allowJs": false,
@@ -24,5 +24,5 @@
     }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx"],
-  "exclude": ["./node_modules/*", "src/sites/*"]
+  "exclude": ["./node_modules/*"]
 }
